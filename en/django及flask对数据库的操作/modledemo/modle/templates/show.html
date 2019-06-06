@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示数据</title>
+</head>
+<body>
+{% for book in bookList %}
+    数据为:{{ book.bid }}-{{ book.bname }}<br/>
+{% endfor %}
+<br>
+<h3>[表格显示数据]</h3>
+<table border="1">
+    <tr>
+        <td>编号</td>
+        <td>名称</td>
+    </tr>
+    {% for b in bookList %}
+    <tr>
+        <td>{{ b.bid }}</td>
+        <td>{{ b.bname }}</td>
+    </tr>
+    {% empty %}
+        <tr>
+            <td colspan="2">暂无数据</td>
+        </tr>
+    {%endfor%}
+</table>
+</body>
+</html>

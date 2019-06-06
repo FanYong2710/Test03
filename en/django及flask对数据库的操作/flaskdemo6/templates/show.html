@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>rid</td>
+        <td>rname</td>
+        <td>操作</td>
+    </tr>
+    {%for role in roleall%}
+    <tr>
+        <td>{{role.rid}}</td>
+        <td>{{role.rname}}</td>
+        <td>
+            <a href="/updateRoles/{{role.rid}}/">修改</a>
+            <a href="/delRoles/{{role.rid}}/">删除</a>
+        </td>
+    </tr>
+    {%endfor%}
+</table>
+<script>
+    function add() {
+        location.href="/addRoles/";
+    }
+</script>
+<button type="button" onclick="add()">添加</button>
+</body>
+</html>

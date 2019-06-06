@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h2>[1]get方法</h2>
+接收数据:{{ gettest }}<br/>
+<strong>[get的特点]</strong>
+<p class="p">1.每次执行查询只能返回一个结果对象，若有多条相同数据则会发生异常</p>
+<p class="p">2.执行查询时若传递的查询条件为真，则数据返回正常，否则发生异常</p>
+
+<h2>[2] filter 方法</h2>
+接收数据:{{ filtertest }}<br/>
+<strong>[filter的特点]</strong>
+<p class="p">1.每次执行查询可以返回多个对象，并存储在结果集中(QuerySet).</p>
+<p class="p">2.执行查询时若传递的查询条件为真，则数据返回正常，否则显示为空结果集</p>
+</body>
+</html>

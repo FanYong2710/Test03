@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="../static/css/style.css">-->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css',_external=True)}}">
+</head>
+<body>
+主页
+<img src="{{url_for('static',filename='img/1.jpg')}}">
+{%if msg %}
+<h3>欢迎您：{{msg}}
+</h3>
+{%else%}
+    <h3>暂无数据</h3>
+{%endif%}
+
+{% for i in data%}
+{{i}}
+{%endfor%}
+</body>
+</html>

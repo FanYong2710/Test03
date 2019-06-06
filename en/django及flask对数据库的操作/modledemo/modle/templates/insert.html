@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    [添加数据]
+<form method="post" action="/addBook/">
+    {% csrf_token %}
+    <input type="text" name="bname">
+    <button type="submit">添加</button>
+</form>
+</body>
+</html>

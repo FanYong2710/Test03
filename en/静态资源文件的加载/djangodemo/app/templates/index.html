@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django页面测试</title>
+{#    <link rel="stylesheet" href="../static/css/style.css" >#}
+{#   加载静态资源指令#}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- 加载js -->
+    <script src="{% static 'js/demo.js' %}"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: solid 1px #cccccc;
+        }
+    </style>
+</head>
+<body>
+    欢迎使用Django框架
+<div>
+    测试数据
+</div>
+<img src="../static/img/a.jpg" width="300">
+<br/>
+<button>按钮测试</button>
+
+<br/>
+{#链接 #}
+<a href="http://www.baidu.com">链接测试</a>
+<a href="test/">跳转至测试页面(相对路径[最优版])</a>
+    <a href="/apps/test/">跳转至测试页面(相对路径)</a>
+<a href="http://127.0.0.1:8000/apps/test/">跳转至测试页面(绝对路径)</a>
+</body>
+</html>
